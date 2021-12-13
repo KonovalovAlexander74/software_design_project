@@ -4,7 +4,7 @@ from xml.etree.ElementTree import Element
 
 import requests
 
-signs = {
+apiSigns = {
     "Овен": "aries",
     "Телец": "taurus",
     "Близнецы": "gemini",
@@ -19,7 +19,7 @@ signs = {
     "Рыбы": "pisces"
 }
 
-days = {
+apiDays = {
     "Сегодня": "today",
     "Завтра": "tomorrow",
     "Вчера": "yesterday"
@@ -36,11 +36,3 @@ def getHoro(horoscope: Element, sign: string, day: string):
     for tag in horoscope.findall(level):
         return tag.text
 
-
-horo = request()
-
-for sign in signs:
-    print("Sign: " + sign + ":")
-    for day in days:
-        print("Day: " + day + " ")
-        print(getHoro(horo, sign, day))
