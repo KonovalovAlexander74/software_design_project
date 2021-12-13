@@ -2,7 +2,7 @@ import telebot
 from telebot import types
 import codecs
 
-bot = telebot.TeleBot("TOKEN")
+bot = telebot.TeleBot("5007446942:AAErwnwR2bQriPpqsdGod_YvvbIpDf3-z44")
 
 signs = ["Овен", "Телец", "Близнецы", "Рак", "Лев", "Дева", "Весы", "Скорпион", "Стрелец", "Козерог", "Водолей", "Рыбы"]
 functions = ["Описание", "Гороскоп", "Совместимость","Назад"]
@@ -49,11 +49,22 @@ def description_message(msg):
 
 def get_compatibility(msg):
     bot.send_message(msg.chat.id, "Ваш знак:  " + users[msg.chat.id].sign + "\nПроверка cовместимости с:  " + msg.text, reply_markup=get_functions_markup())
+    file = open("signs/" + str(users[msg.chat.id].sign) + ".txt", encoding='utf-8')
+    if file:
+        file.readline()
+        for i in file:
+            split = i.split(maxsplit=2)
+            if msg.text == split[0]:
+                bot.send_message(msg.chat.id, split[2], reply_markup=get_functions_markup())
+
+
+    file.close()
 
 @bot.message_handler(regexp='Совместимость')
 def description_message(msg):
     bot.send_message(msg.chat.id, "Выберите знак для проверки совместимости ", reply_markup=get_markup())
     bot.register_next_step_handler(msg, get_compatibility)
+
 
 
 @bot.message_handler(regexp='Назад')
@@ -70,7 +81,6 @@ def text_message(msg):
             isSign = True
             bot.send_message(msg.chat.id, "Вы выбрали знак:  " + s, reply_markup=get_functions_markup())
             users[msg.chat.id] = User(msg.chat.id, str(s))
-            print(users[msg.chat.id].sign)
             break
 
 
@@ -84,3 +94,4 @@ def text_message(msg):
 
 
 bot.polling(none_stop=True)
+
