@@ -2,7 +2,7 @@ import telebot
 from telebot import types
 import codecs
 
-bot = telebot.TeleBot("5007446942:AAErwnwR2bQriPpqsdGod_YvvbIpDf3-z44")
+bot = telebot.TeleBot("TOKEN")
 
 signs = ["Овен", "Телец", "Близнецы", "Рак", "Лев", "Дева", "Весы", "Скорпион", "Стрелец", "Козерог", "Водолей", "Рыбы"]
 functions = ["Описание", "Гороскоп", "Совместимость","Назад"]
@@ -84,4 +84,3 @@ def text_message(msg):
 
 
 bot.polling(none_stop=True)
-
