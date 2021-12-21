@@ -20,4 +20,5 @@ jobs:
       - name: Install requirements
         run: pip install -r requirements.txt
       - name: Run tests
-        run: run tests.py
+        run: python tests.py
+        shell: bash {0}
