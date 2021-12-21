@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79e491f1-b2e7-46a4-a3e0-9708b99c1460" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/tests.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api.py" beforeDir="false" afterPath="$PROJECT_DIR$/Api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="79e491f1-b2e7-46a4-a3e0-9708b99c1460" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1639391265109</updated>
       <workItem from="1639391268072" duration="3733000" />
-      <workItem from="1640088385370" duration="1192000" />
+      <workItem from="1640088385370" duration="1471000" />
     </task>
     <servers />
   </component>
