@@ -34,4 +34,3 @@ jobs:
           run: docker build -t $LOGIN/$NAME:${GITHUB_REF:11} -f Dockerfile .
         - name: Push image to docker.io
           run: docker push $LOGIN/$NAME:${GITHUB_REF:11}
-          run: "curl --silent --show-error --fail -X POST ${{ secrets.DEPLOYMENT_SERVER }} -H 'Authorization: ${{ secrets.DEPLOYMENT_TOKEN }}' -H 'Content-Type: application/json' -d '{\"owner\": \"${{ secrets.DOCKER_LOGIN }}\", \"repository\": \"${{ secrets.DOCKER_NAME }}\", \"tag\": \"${{ env.RELEASE_VERSION }}\", \"ports\": {\"8080\": 8080}}'"
