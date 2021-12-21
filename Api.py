@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import string
 import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import Element
@@ -29,10 +30,8 @@ def request():
     response = requests.get("https://ignio.com/r/export/utf/xml/daily/com.xml").text
     return ET.fromstring(response)
 
-
-def getHoro(horoscope: Element, sign: string, day: string):
+def getHoro(horoscope, sign, day):
     level = sign + "/" + day
 
     for tag in horoscope.findall(level):
         return tag.text
-
